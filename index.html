@@ -1,380 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <!-- Start Main Container -->
-    <div class="main-container">
-        <!-- Start Game Header -->
-        <div class="header-row">
-            <div class="game-title">
-                <h1>Match all the cards</h1>
-            </div>
-            <div class="buttons">
-                <button class="reset"></button>
-                <button class="quickPeek"></button>
-            </div>
-            <div class="score">
-                <h1>Score: 100</h1>
+    <div class="main-container content">
+      <!-- Start Game Header -->
+
+      <div class="columns">
+        <div class="column">
+            <div class="notification is-info block">
+              <h1>Match all the cards</h1>
             </div>
         </div>
-        <!-- End Game Header -->
-
-        <!-- Start Card Row #1 -->
-        <div class="row card-row">
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 1</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 2</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 3</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 4</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 5</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 6</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 7</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 8</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            
+        <div class="column score">
+          <h1>Score: 100</h1>
         </div>
-        <!-- End Card Row #1 -->
+        <div class="column">
+            <div class="buttons gameButtons">
+              <button class="button is-info">Start Game</button>
+              <button class="button is-success">Reset Game</button>
+              <button class="button is-warning">Quick Peek</button>
+            </div>
+          </div>
+      </div>
 
+      <!-- End Game Header -->
 
-        <!-- Start Card Row #2 -->
-        <div class="row card-row">
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 1</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
+      <!-- Start Card Row #1 -->
+      <div class="row card-row">
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 1</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
             </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 2</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 3</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 4</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 5</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 6</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 7</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 8</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            
+          </div>
         </div>
-        <!-- End Card Row #2 -->
-
-        <!-- Start Card Row #3 -->
-        <div class="row card-row">
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 1</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 2</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
             </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 2</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 3</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 4</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 5</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 6</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 7</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 8</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            
+          </div>
         </div>
-        <!-- End Card Row #3 -->
-
-        <!-- Start Card Row #4 -->
-        <div class="row card-row">
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 1</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 3</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
             </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 2</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 3</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 4</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 5</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 6</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 7</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-number">
-                    <h3>Card 8</h3>
-                </div>
-                <div class="card-front">
-                    <div class="row">
-                        <i class="font-awesome fab fa-android fa-7x"></i>
-                    </div> 
-                </div>
-            </div>  
+          </div>
         </div>
-        <!-- End Card Row #4 -->
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 4</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 5</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 6</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 7</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 8</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card Row #1 -->
 
+      <!-- Start Card Row #2 -->
+      <div class="row card-row">
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 1</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 2</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 3</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 4</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 5</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 6</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 7</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 8</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card Row #2 -->
+
+      <!-- Start Card Row #3 -->
+      <div class="row card-row">
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 1</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 2</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 3</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 4</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 5</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 6</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 7</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 8</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card Row #3 -->
+
+      <!-- Start Card Row #4 -->
+      <div class="row card-row">
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 1</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 2</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 3</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 4</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 5</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 6</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 7</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-number">
+            <h3>Card 8</h3>
+          </div>
+          <div class="card-front">
+            <div class="row">
+              <i class="font-awesome fab fa-android fa-7x"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Card Row #4 -->
     </div>
     <!-- End Main Container -->
 
-
-    <script src='./app.js'></script>
-</body>
+    <script src="./app.js"></script>
+  </body>
 </html>

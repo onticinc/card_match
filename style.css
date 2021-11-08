@@ -2,17 +2,13 @@
 :root {
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
+    text-decoration: white;
     background-color: #484848;
   }
   * {
     box-sizing: border-box;
-    margin: 40;
+    margin: 100;
   }
-
-.header-row {
-    display:inline-flex;
-    justify-content: space-around;
-}
 
 
 .card-row {
@@ -21,6 +17,7 @@
 }
 
 .main-container {
+    margin:75px;
     padding: 50px;
     align-items: center;
     border: solid white;
@@ -36,5 +33,12 @@
     margin: 10px;
     text-align: center;
 }
+
+.gameButtons {
+    display:flex;
+    flex-direction: column;
+    border: solid white;
+}
+
 
 

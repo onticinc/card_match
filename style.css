@@ -6,15 +6,25 @@
   }
   * {
     box-sizing: border-box;
-    margin: 20;
+    margin: 40;
   }
 
-.card-row {
-    display: flexbox;
-    display: inline-flex;
-
+.header-row {
+    display:inline-flex;
+    justify-content: space-around;
 }
 
+
+.card-row {
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+
+.main-container {
+    padding: 50px;
+    align-items: center;
+    border: solid white;
+}
 
 .card {
     background: rgb(2,0,36);
@@ -22,17 +32,9 @@
     border: solid rgb(255, 255, 255);
     border-width: 4px;
     color:white;
-    padding: 50px;
+    padding: 30px;
     margin: 10px;
-    max-width: 180px;
     text-align: center;
 }
 
 
-h1 {
-    color:white;
-}
-
-.font-awesome {
-    color:white;
-}

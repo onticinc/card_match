@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Flashcard Memory Game</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
@@ -24,20 +24,16 @@
 
       <div class="columns">
         <div class="column">
-            <div class="notification is-info block">
-              <h1>Match all the cards</h1>
-            </div>
+          <button class="button is-info">Start Game</button>
+          <button class="button is-success">Reset Game</button>
+          <button class="button is-warning">Quick Peek</button>
+        </div>
+        <div class="column">     
+            <h1 id="game-title">Match all the cards</h1>
         </div>
         <div class="column score">
-          <h1>Score: 100</h1>
+          <h1 id="score">Score: 100</h1>
         </div>
-        <div class="column">
-            <div class="buttons gameButtons">
-              <button class="button is-info">Start Game</button>
-              <button class="button is-success">Reset Game</button>
-              <button class="button is-warning">Quick Peek</button>
-            </div>
-          </div>
       </div>
 
       <!-- End Game Header -->
@@ -131,7 +127,7 @@
       <div class="row card-row">
         <div class="card">
           <div class="card-number">
-            <h3>Card 1</h3>
+            <h3>Card 9</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -141,7 +137,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 2</h3>
+            <h3>Card 10</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -151,7 +147,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 3</h3>
+            <h3>Card 11</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -161,7 +157,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 4</h3>
+            <h3>Card 12</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -171,7 +167,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 5</h3>
+            <h3>Card 13</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -181,7 +177,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 6</h3>
+            <h3>Card 14</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -191,7 +187,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 7</h3>
+            <h3>Card 15</h3>
           </div>
           <div class="card-front">
             <div class="row">
@@ -201,7 +197,7 @@
         </div>
         <div class="card">
           <div class="card-number">
-            <h3>Card 8</h3>
+            <h3>Card 16</h3>
           </div>
           <div class="card-front">
             <div class="row">

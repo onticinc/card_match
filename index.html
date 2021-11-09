@@ -22,17 +22,21 @@
     <div class="main-container content">
 
       <!-- Start Game Header -->
-      <div class="column">
-        <div class="column-1">
+      <div class="container">
+        
+        <div class="row">
+          <h1 id="game-title">Match all the cards</h1>
+        </div>
+
+        <!-- Buttons -->
+        <div class="row m-t-15">
           <button class="button is-info startGame">Start Game</button>
           <button class="button is-success">Reset Game</button>
           <button class="button is-warning">Quick Peek</button>
         </div>
-        <div class="grid-2">
-          <h1 id="game-title">Match all the cards</h1>
-        </div>
-        <div class="grid-3">
-          <h1 id="score">Score: 100</h1>
+        
+        <div class="row m-t-15">
+          <h2 id="score">Score: 100</h2>
         </div>
       </div>
 
@@ -42,10 +46,11 @@
         <div class="card" id="card-1">
           <div class="card-number">
             <h3>Card 1</h3>
+            <i class="font-awesome fab fa-android fa-7x"></i>
           </div>
-          <div class="card-front">
+          <div class="card-front" style="display:block;">
             <div class="row">
-              <i class="font-awesome fab fa-android fa-7x"></i>
+              
             </div>
           </div>
         </div>

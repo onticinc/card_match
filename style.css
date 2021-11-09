@@ -11,11 +11,6 @@
   }
 
 
-.card-row {
-    display: inline-flex;
-    justify-content: space-evenly;
-}
-
 .main-container {
     margin:75px;
     padding: 50px;
@@ -53,6 +48,7 @@
 
 .content h1 {
     color: white;
+    font-size: 30px;
 }
 
 .content h2 {
@@ -77,5 +73,11 @@
     grid-row-gap: 10px;
     grid-column-gap: 10px;
 }
+
+.m-t-15{
+    margin-top: 15px;
+}
+
+
 
 

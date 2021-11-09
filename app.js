@@ -11,23 +11,20 @@ let cardValue = 10;
 let card = document.querySelectorAll('card');
 
 
-// Start Game Button initialize board with all of the cards set upside down. 
+// Start Game Button initialize board with all of the cards set upside down.
 
-    function startGame(){
-        document.querySelector('startGame').onclick
-        if (card.)
+function dealCards(){
 
-    }
+}
 
-    // use js to populate flex and grid area. Create object with FA icon values and card numbers. 
+
+    // use js to populate flex and grid area. Create object with FA icon values and card numbers. DO LATER. 
 
 // flip card
 function flipCard() {
-      document.getElementById("search-form").classList.toggle("hidden");
-      document.querySelector("#results-container").classList.toggle("hidden");
+      document.querySelectorAll("card-back").classList.toggle("hidden");
+      document.querySelectorAll("card-front").classList.toggle("hidden");
     }
-
-
 
 // check to see if cards match
 

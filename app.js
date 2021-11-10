@@ -13,8 +13,24 @@ let card = document.querySelectorAll('card');
 
 // Start Game Button initialize board with all of the cards set upside down.
 
-function dealCards(){
-    if (card.class = 'visible') 
+
+function startGame(){
+
+    let oneOrTwoPlayer = prompt()
+
+    let player1 = prompt("Enter Player 1 Name:", "Player 1");
+    
+    let player2 = prompt("Enter Player 2 Name:", "Player 2");
+    let text;
+    text = "Hello " + player1 + player2 + "Are you ready to play?";
+    
+    console.log(player1, player2);
+}
+
+
+
+
+     
     // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers.  
 
 // flip card

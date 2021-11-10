@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Start Header -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,6 +19,7 @@
 
     <link rel="stylesheet" href="./style.css" />
   </head>
+  <!-- End Header -->
   <body>
     <!-- Start Main Container -->
     <div class="main-container content">
@@ -25,22 +27,70 @@
       <div class="row">
         <div class="container">
           <div class="row">
-            <h1 id="game-title">Match all the cards</h1>
+            <h1 id="game-title">Flash Card Memory Game</h1>
           </div>
-
           <!-- Buttons -->
           <div class="row m-t-15">
-            <button class="button is-info startGame" onclick="startGame()">Start Game</button>
-            <button class="button is-success">Reset Game</button>
-            <button class="button is-warning">Quick Peek</button>
+            <button class="button is-success reset-game-button">
+              Reset Game
+            </button>
+            <button class="button is-warning quick-look-button">
+              Quick Look
+            </button>
           </div>
-
-          <div class="row m-t-15">
+          <div class="row m-t-15 score">
             <h2 id="score">Score: 100</h2>
           </div>
-        </div>  
+        </div>
       </div>
       <!-- End Game Header -->
+
+      <div class="field m-t-15">
+        <label class="label"><h4>Player One:</h4></label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input"
+            type="text"
+            placeholder="Text input"
+            value="Enter player one name"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field m-t-15">
+        <label class="label"><h4>Player Two:</h4></label>
+        <div class="control has-icons-left has-icons-right">
+          <input
+            class="input is-success"
+            type="text"
+            placeholder="Text input"
+            value="Enter player two name"
+          />
+          <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+          </span>
+        </div>
+      </div>
+      <div class="field m-t-15">
+        <label class="label"><h4>Show Card Numbers:</h4></label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Show Card Numbers</option>
+              <option>Don't Show Card Numbers</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field is-grouped m-t-15">
+        <div class="control">
+          <button class="button is-info startGame" onclick="startGame()">
+            Start Game
+          </button>
+        </div>
+      </div>
 
       <!-- Start Main Grid Container -->
       <div class="grid-container">
@@ -868,16 +918,10 @@
           <!-- End Card Front -->
         </div>
         <!-- End Card 30 -- Bird 2 -->
-
       </div>
       <!-- End Main Grid Container -->
-
     </div>
     <!-- End Main Container -->
-    
-
-    <!-- PLaying with Grid -->
-
     <script src="./app.js"></script>
   </body>
 </html>

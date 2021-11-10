@@ -60,6 +60,10 @@
   color: white;
 }
 
+.content h4 {
+  color: white;
+}
+
 .grid-header {
   display: grid;
   grid-template-columns: 1fr, 3fr, 1fr;
@@ -80,4 +84,16 @@
 
 .card-front {
   display: none;
+}
+
+.reset-game-button {
+  display:none;
+}
+
+.quick-look-button {
+  display:none;
+}
+
+.score {
+  display:none;
 }

@@ -29,8 +29,9 @@
           <div class="row">
             <h1 id="game-title">Flash Card Memory Game</h1>
           </div>
+
           <!-- Buttons -->
-          <div class="row m-t-15">
+          <div class="row m-t-15 game-buttons">
             <button class="button is-success reset-game-button">
               Reset Game
             </button>
@@ -38,59 +39,83 @@
               Quick Look
             </button>
           </div>
-          <div class="row m-t-15 score">
-            <h2 id="score">Score: 100</h2>
+
+          <!-- Score  -->
+          <div class="one-player-score">
+            <h2 id="total-score">Score: 100</h2>
           </div>
+
+          <div class="row m-t-15 two-player-score">
+            <h2 id="player-one-score">Player One Score:</h2>
+            <h2 id="player-two-score">Player Two Score:</h2>
+          </div>
+          
         </div>
       </div>
       <!-- End Game Header -->
 
-      <div class="field m-t-15">
-        <label class="label"><h4>Player One:</h4></label>
-        <div class="control has-icons-left has-icons-right">
-          <input
-            class="input"
-            type="text"
-            placeholder="Text input"
-            value="Enter player one name"
-          />
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-        </div>
-      </div>
-      <div class="field m-t-15">
-        <label class="label"><h4>Player Two: (Leave empty for one player mode.)</h4></label>
-        <div class="control has-icons-left has-icons-right">
-          <input
-            class="input is-success"
-            type="text"
-            placeholder="Text input"
-            value="Enter player two name"
-          />
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-        </div>
-      </div>
-      <div class="field m-t-15">
-        <label class="label"><h4>Show / Hide Card Numbers:</h4></label>
-        <div class="control">
-          <div class="select">
-            <select>
-              <option>Show Card Numbers</option>
-              <option>Hide Card Numbers</option>
-            </select>
+      <!-- Start Player Input Form -->
+      <div class="input-form">
+        <!-- Player One Input -->
+        <div class="field m-t-15">
+          <label class="label"><h4>Player One:</h4></label>
+          <div class="control has-icons-left has-icons-right">
+            <input id="player-one-input"
+              class="input"
+              type="text"
+              placeholder="Enter Player One Name"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
           </div>
         </div>
-      </div>
-      <div class="field is-grouped m-t-15">
-        <div class="control">
-          <button class="button is-info startGame" onclick="startGame()">
-            Start Game
-          </button>
+        <!-- End Player One Input -->
+
+        <!-- Start Player One Input -->
+        <div class="field m-t-15">
+          <label class="label"
+            ><h4>Player Two: (Leave empty for one player mode.)</h4></label
+          >
+          <div class="control has-icons-left has-icons-right">
+            <input
+              id="player-two-input"
+              class="input is-success player-two-input"
+              type="text"
+              placeholder="Enter Player Two Name"
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
         </div>
+        <!-- End Player One Input -->
+
+        <!-- Start Show Hide Card Numbers -->
+        <div class="field m-t-15">
+          <label class="label"><h4>Show / Hide Card Numbers:</h4></label>
+          <div class="control">
+            <div class="select">
+              <select>
+                <option>Show Card Numbers</option>
+                <option>Hide Card Numbers</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- End Start Show Hide Card Numbers -->
+
+        <!-- Start Button -->
+        <div class="field is-grouped m-t-15">
+          <div class="control">
+            <button id="startButton" class="button is-info startGame" onclick="startGame()">
+              Start Game
+            </button>
+          </div>
+        </div>
+        <!-- End Button -->
       </div>
+      <!-- End Player Input Form -->
 
       <!-- Start Main Grid Container -->
       <div class="grid-container card-table">
@@ -922,6 +947,7 @@
       <!-- End Main Grid Container -->
     </div>
     <!-- End Main Container -->
+
     <script src="./app.js"></script>
   </body>
 </html>

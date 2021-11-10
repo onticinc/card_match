@@ -86,15 +86,15 @@
   display: none;
 }
 
-.reset-game-button {
+.game-buttons {
   display:none;
 }
 
-.quick-look-button {
+.one-player-score {
   display:none;
 }
 
-.score {
+.two-player-score {
   display:none;
 }
 

@@ -5,33 +5,36 @@ console.log('[app.js] is working.');
 
 let player1 = 'null';
 let player2 = 'null';
-
-let score = 'null';
+let mainScore = 'null';
+let player1Score = 'null'
+let player2Score = 'null'
 let cardValue = 10;
 let card = document.querySelectorAll('card');
 
-
-// Start Game Button initialize board with all of the cards set upside down.
-
-
+// Start Game Button.
 function startGame(){
 
-    let oneOrTwoPlayer = prompt()
+    // Set player 1 name.
+    let player1 = document.getElementById('player-one-input').value;
 
-    let player1 = prompt("Enter Player 1 Name:", "Player 1");
+    // Set player 2 name. 
+    let player2 = document.getElementById('player-two-input').value; 
+
+    // Set Show Hide Card Number
+    let showHide = document.getElementById('player-two-input').value;
     
-    let player2 = prompt("Enter Player 2 Name:", "Player 2");
-    let text;
-    text = "Hello " + player1 + player2 + "Are you ready to play?";
+    // if (player2 = null) {
+    //     document.querySelector('');
+    // } else {
+    //     document.querySelector('');
+    // }
+
+    // let gameText;
+    //gameText = "Hello " + player1 + player2 + "Are you ready to play?";
     
     console.log(player1, player2);
 }
-
-
-
-
-     
-    // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers.  
+    // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  
 
 // flip card
 function flipCard() {

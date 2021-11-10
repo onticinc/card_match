@@ -14,23 +14,28 @@ let card = document.querySelectorAll('card');
 // Start Game Button initialize board with all of the cards set upside down.
 
 function dealCards(){
-
-}
-
-
-    // use js to populate flex and grid area. Create object with FA icon values and card numbers. DO LATER. 
+    if (card.class = 'visible') 
+    // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers.  
 
 // flip card
 function flipCard() {
-      document.querySelectorAll("card-back").classList.toggle("hidden");
-      document.querySelectorAll("card-front").classList.toggle("hidden");
-    }
+    document.querySelectorAll("card-back").classList.toggle("hidden");
+    document.querySelectorAll("card-front").classList.toggle("hidden");
+}
 
 // check to see if cards match
 
+
+
 // if cards match leave right side up and add to score. 
 
+
+
+
 // alert card match
+
+
+
 
 // alert winner
 

@@ -16,46 +16,20 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="./style.css" />
   </head>
   <!-- End Header -->
   <body>
+
     <!-- Start Main Container -->
-    <div class="main-container content">
-      <!-- Start Game Header -->
+    <div class="main-container content m-t-15">
       <div class="row">
-        <div class="container">
-          <div class="row">
-            <h1 id="game-title">Flash Card Memory Game</h1>
-          </div>
-
-          <!-- Buttons -->
-          <div class="row m-t-15 game-buttons">
-            <button class="button is-success reset-game-button">
-              Reset Game
-            </button>
-            <button class="button is-warning quick-look-button">
-              Quick Look
-            </button>
-          </div>
-
-          <!-- Score  -->
-          <div class="one-player-score">
-            <h2 id="total-score">Score: 100</h2>
-          </div>
-
-          <div class="row m-t-15 two-player-score">
-            <h2 id="player-one-score">Player One Score:</h2>
-            <h2 id="player-two-score">Player Two Score:</h2>
-          </div>
-          
-        </div>
+        <h1 id="game-title">Flash Card Memory Game</h1>
       </div>
-      <!-- End Game Header -->
 
       <!-- Start Player Input Form -->
       <div class="input-form">
+
         <!-- Player One Input -->
         <div class="field m-t-15">
           <label class="label"><h4>Player One:</h4></label>
@@ -95,7 +69,7 @@
         <div class="field m-t-15">
           <label class="label"><h4>Show / Hide Card Numbers:</h4></label>
           <div class="control">
-            <div class="select">
+            <div id="select" class="select">
               <select id="show-hide">
                 <option value="1">Show Card Numbers</option>
                 <option value="2">Hide Card Numbers</option>
@@ -117,10 +91,35 @@
       </div>
       <!-- End Player Input Form -->
 
+      <!-- Start Game Header -->
+      <div class="row">
+          <!-- Buttons -->
+          <div id="game-buttons" class="row m-t-15 game-buttons hidden">
+            <button class="button is-success reset-game-button">
+              Reset Game
+            </button>
+            <button class="button is-warning quick-look-button">
+              Quick Look
+            </button>
+          </div>
+
+          <!-- Score  -->
+          <div class="one-player-score hidden">
+            <h2 id="total-score">Score: 100</h2>
+          </div>
+          <div class="row m-t-15 two-player-score hidden">
+            <h2 id="player-one-score">Player One Score:</h2>
+            <h2 id="player-two-score">Player Two Score:</h2>
+          </div>
+      
+      </div>
+      <!-- End Game Header -->
+
+
       <!-- Start Main Grid Container -->
-      <div class="grid-container card-table">
+      <div class="grid-container card-table m-t-15">   
         <!-- Start Card 1 -- Dragon -->
-        <div class="card" id="card-1">
+        <div class="card hidden" id="card-1">
           <!-- Start Card Back -->
           <div class="card-back">
             <div class="card-number">
@@ -145,7 +144,7 @@
         <!-- End Card 1 -->
 
         <!-- Start Card 2 -- Cat -->
-        <div class="card" id="card-2">
+        <div class="card hidden" id="card-2">
           <!-- Start Card Back -->
           <div class="card-back">
             <div class="card-number">
@@ -170,7 +169,7 @@
         <!-- End Card 2 -- Cat -->
 
         <!-- Start Card 3 -- Dog -->
-        <div class="card" id="card-3">
+        <div class="card hidden" id="card-3">
           <!-- Start Card Back -->
           <div class="card-back">
             <div class="card-number">
@@ -195,7 +194,7 @@
         <!-- End Card 2 -- Dog -->
 
         <!-- Start Card 4 -- Frog -->
-        <div class="card" id="card-4">
+        <div class="card hidden" id="card-4">
           <!-- Start Card Back -->
           <div class="card-back">
             <div class="card-number">

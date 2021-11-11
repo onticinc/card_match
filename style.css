@@ -82,22 +82,6 @@
   margin-top: 15px;
 }
 
-.card-front {
-  display: none;
-}
-
-.game-buttons {
-  display:none;
-}
-
-.one-player-score {
-  display:none;
-}
-
-.two-player-score {
-  display:none;
-}
-
-.card-table {
+.hidden {
   display:none;
 }

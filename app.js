@@ -8,9 +8,12 @@ let player1Score = 'null';
 let player2Score = 'null';
 let cardValue = 10;
 const card = document.querySelectorAll('card');
+const playerOneName = document.getElementById('player-one-name');
+const playerTwoName = documentt.getElementById('player-two-name');
+const onePlayerScore = document.getElementById("player-one-score");
+const twoPlayerScore = document.getElementById("player-two-score");
 const buttons = document.getElementById('game-buttons');
-const onePlayerScore = document.getElementById("one-player-score");
-const twoPlayerScore = document.getElementById("two-player-score");
+
 
 // Start Game Button.
 function startGame() {
@@ -24,10 +27,20 @@ function startGame() {
 
     console.log(player1, player2, showHideSelector);
 
-} // works up to here. 
+    // One Player Mode = Show Game Buttons, total score, player one name. 
+    if (player2 = null) {
+        buttons.classList.toggle("hidden");
+        .innterHtml = 
+        onePlayerScore.classList.toggle("hidden");
+    }
+
+}
 
 
-function showHide(){
+
+
+
+function showHide() {
     buttons.classList.toggle("hidden");
     onePlayerScore.classList.toggle("hidden");
     console.log(buttons);
@@ -35,8 +48,6 @@ function showHide(){
 
 
     // If player two is empty and show card number is selected, Toggle: show-front of card, one player score, game buttons, and cards. 
-    //if (player2 = null) {
-
 
 
     //}
@@ -51,10 +62,6 @@ function showHide(){
     // // If player two is not null, show game buttons, two player score, 
     // }
 
-
-
-
-
 // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  
 
 // flip card
@@ -64,8 +71,6 @@ function showHide(){
 // }
 
 // check to see if cards match
-
-
 
 // if cards match leave right side up  and add to score. 
 

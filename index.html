@@ -82,7 +82,10 @@
         <!-- Start Button -->
         <div class="field is-grouped m-t-15">
           <div class="control">
-            <button id="startButton" class="button is-info startGame" onclick="startGame()">
+            <button id="startButton" class="button is-info" onclick="startGame()">
+              Start Game
+            </button>
+            <button id="testButton" class="button is-info" onclick="showHide()">
               Start Game
             </button>
           </div>
@@ -104,10 +107,10 @@
           </div>
 
           <!-- Score  -->
-          <div class="one-player-score hidden">
-            <h2 id="total-score"></h2>
+          <div id="one-player-score" class="hidden">
+            <h2 id="total-score">Testing</h2>
           </div>
-          <div class="row m-t-15 two-player-score hidden">
+          <div id="two-player-score" class="row m-t-15 hidden">
             <h2 id="player-one-score">Player One Score:</h2>
             <h2 id="player-two-score">Player Two Score:</h2>
           </div>
@@ -117,7 +120,7 @@
 
 
       <!-- Start Main Grid Container -->
-      <div class="grid-container card-table m-t-15">   
+      <div class="grid-container hidden card-table m-t-15">   
         <!-- Start Card 1 -- Dragon -->
         <div class="card hidden" id="card-1">
           <!-- Start Card Back -->

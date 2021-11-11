@@ -20,7 +20,6 @@
   </head>
   <!-- End Header -->
   <body>
-
     <!-- Start Main Container -->
     <div class="main-container content m-t-15">
       <div class="row">
@@ -29,12 +28,12 @@
 
       <!-- Start Player Input Form -->
       <div class="input-form">
-
         <!-- Player One Input -->
         <div class="field m-t-15">
           <label class="label"><h4>Player One:</h4></label>
           <div class="control has-icons-left has-icons-right">
-            <input id="player-one-input"
+            <input
+              id="player-one-input"
               class="input"
               type="text"
               placeholder="Enter Player One Name"
@@ -82,7 +81,11 @@
         <!-- Start Button -->
         <div class="field is-grouped m-t-15">
           <div class="control">
-            <button id="startButton" class="button is-info" onclick="startGame()">
+            <button
+              id="startButton"
+              class="button is-info"
+              onclick="startGame()"
+            >
               Start Game
             </button>
           </div>
@@ -92,30 +95,40 @@
       <!-- End Player Input Form -->
 
       <!-- Start Game Header -->
-      <div class="row">
-          <!-- Buttons -->
-          <div id="game-buttons" class="row m-t-15 game-buttons hidden">
-            <button class="button is-success reset-game-button">
+      <div class="grid-header content">
+        <!-- Buttons -->
+        <div id="game-buttons" class="column m-t-15">
+          <div class="row">
+            <button id="reset-game-button" class="button is-success">
               Reset Game
             </button>
-            <button class="button is-warning quick-look-button">
-              Quick Look
-            </button>
           </div>
+          <button id="quick-look-button" class="button is-warning">
+            Quick Look
+          </button>
+        </div>
 
-          <!-- Score  -->
-          <div id="player-score-div">
-            <h2 id="total-score hidden">Total Points Available</h2>
-            <h2 id="player-one-name hidden">Player One:</h2><h2 id="player-one-score">Score:</h2>
-            <h2 id="player-two-name hidden">Player Two:</h2><h2 id="player-two-score">Score:</h2>
+        <!-- Score  -->
+        <div id="names-and-score" class="column">
+          <h2 id="total-score">Total Points Available</h2>
+        </div>
+        <div id="player-one-info" class="column">
+          <div class="row">
+            <h2 id="player-one-name">Player One:</h2>
+            <h2 id="player-one-score">Score</h2>
           </div>
-      
+        </div>
+        <div id="player-two-info" class="column">
+          <div class="row">
+            <h2 id="player-two-name">Player Two:</h2>
+            <h2 id="player-two-score">Score</h2>
+          </div>
+        </div>
       </div>
       <!-- End Game Header -->
 
-
       <!-- Start Main Grid Container -->
-      <div class="grid-container hidden card-table m-t-15">   
+      <div class="grid-container hidden card-table m-t-15">
         <!-- Start Card 1 -- Dragon -->
         <div class="card hidden" id="card-1">
           <!-- Start Card Back -->

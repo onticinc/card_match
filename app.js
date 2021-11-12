@@ -46,23 +46,30 @@ function startGame() {
     // hide card numbers. 
     if (showHideSelector === '2') {
         for (let idx = 0; idx < cardNumberList.length; idx++) {
-            let card = cardNumberList[idx];   
-            card.addEventListener('click', function(){
                 card.classList.toggle('hidden');
-            });
-            console.log(card);
+            };
+            
         } 
-    };
-
+    
     // Hide form. 
     inputForm.classList.toggle('hidden');
-}
-
+};
 function showHideCard() {
     card.card-front.classList.toggle("hidden");
     console.log('card');
 }
 
+
+// // hide card numbers. 
+// if (showHideSelector === '2') {
+//     for (let idx = 0; idx < cardNumberList.length; idx++) {
+//         let card = cardNumberList[idx];   
+//         card.addEventListener('click', function(){
+//             card.classList.toggle('hidden');
+//         });
+//         console.log(card);
+//     } 
+// };
 
 // Figure out how to flip and turn one 
 

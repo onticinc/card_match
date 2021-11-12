@@ -26,6 +26,11 @@
   justify-content: flex-end;
 }
 
+.game-header {
+  border-bottom: solid rgb(255, 255, 255);
+  border-width: 4px;
+}
+
 .card {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -64,12 +69,7 @@
   color: white;
 }
 
-.grid-header {
-  display: grid;
-  grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
-  display: inline-flex;
-  justify-content: space-evenly;
-}
+
 
 .grid-container {
   display: grid;

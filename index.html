@@ -47,9 +47,9 @@
 
         <!-- Start Player One Input -->
         <div class="field m-t-15">
-          <label class="label"
-            ><h4>Player Two: (Leave empty for one player mode.)</h4></label
-          >
+          <label class="label">
+            <h4>Player Two: (Leave empty for one player mode.)</h4>
+          </label>
           <div class="control has-icons-left has-icons-right">
             <input
               id="player-two-input"
@@ -95,33 +95,32 @@
       <!-- End Player Input Form -->
 
       <!-- Start Game Header -->
-      <div class="grid-header content">
-        <!-- Buttons -->
-        <div id="game-buttons" class="column m-t-15">
-          <div class="row">
-            <button id="reset-game-button" class="button is-success">
-              Reset Game
-            </button>
+      <div class="row">
+        <div class="grid-container game-header content hidden">
+          <!-- Buttons -->
+          <div id="game-buttons" class="m-t-15">
+            <div class="row">
+              <button id="reset-game-button" class="button is-success">
+                Reset Game
+              </button>
+              <button id="quick-look-button" class="button is-warning">
+                Quick Look
+              </button>
+            </div>
           </div>
-          <button id="quick-look-button" class="button is-warning">
-            Quick Look
-          </button>
-        </div>
-
-        <!-- Score  -->
-        <div id="names-and-score" class="column">
-          <h2 id="total-score">Total Points Available</h2>
-        </div>
-        <div id="player-one-info" class="column">
-          <div class="row">
-            <h2 id="player-one-name">Player One:</h2>
-            <h2 id="player-one-score">Score</h2>
-          </div>
-        </div>
-        <div id="player-two-info" class="column">
-          <div class="row">
-            <h2 id="player-two-name">Player Two:</h2>
-            <h2 id="player-two-score">Score</h2>
+            
+            <!-- Score  -->
+            <div id="names-and-score" class="m-t-15">
+              <div id="total-score">
+                <h2 id="total-score">Total Points Available:</h2>
+              </div>
+              <div id="player-one-info">
+                  <h2 id="player-one-name">Player One:</h2>
+              </div>
+              <div id="player-two-info">
+                  <h2 id="player-two-name">Player Two:</h2>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -129,6 +128,8 @@
 
       <!-- Start Main Grid Container -->
       <div class="grid-container hidden card-table m-t-15">
+       
+       
         <!-- Start Card 1 -- Dragon -->
         <div class="card hidden" id="card-1">
           <!-- Start Card Back -->

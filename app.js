@@ -12,7 +12,7 @@ const gameHeader = document.getElementById('game-header');
 const cardContainer = document.getElementById('card-table');
 const card = document.querySelectorAll('card');
 const cardFront = document.querySelectorAll('card-front');
-const cardNumber = document.querySelectorAll('h3-card-number');
+const cardNumberList = document.querySelectorAll('.h3-card-number');
 const playerOneName = document.getElementById('player-one-name');
 const playerTwoName = document.getElementById('player-two-name');
 const playerOneScore = document.getElementById("player-one-score");
@@ -44,10 +44,14 @@ function startGame() {
     console.log(playerOneName, playerTwoName, showHideSelector);
 
     // hide card numbers. 
-    if (showHideSelector === 2) {
-        for (let idx = 0; idx < cardNumber.length; idx++) {
-            cardNumber.classList.toggle("hidden");
-        } console.log(cardNumber);
+    if (showHideSelector === '2') {
+        for (let idx = 0; idx < cardNumberList.length; idx++) {
+            let card = cardNumberList[idx];   
+            card.addEventListener('click', function(){
+                card.classList.toggle('hidden');
+            });
+            console.log(card);
+        } 
     };
 
     // Hide form. 

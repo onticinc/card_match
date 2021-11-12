@@ -1,13 +1,14 @@
 console.log('[app.js] is working.');
 
 // set variables
-let player1 = 'null';
-let player2 = 'null';
+let player1 = '0';
+let player2 = '0';
 let mainScore = 'null';
 let player1Score = 'null';
 let player2Score = 'null';
 let cardValue = 10;
 const gameHeader = document.getElementById('game-header');
+const cardContainer = document.getElementById('card-table');
 const card = document.querySelectorAll('card');
 const playerOneName = document.getElementById('player-one-name');
 const playerTwoName = document.getElementById('player-two-name');
@@ -24,23 +25,26 @@ function startGame() {
     // Set show hide on front of the card. 
     let showHideSelector = document.getElementById('show-hide-selector').value;
 
-    playerOneName.innerText = playerOneInput;
-    playerTwoName.innerText = playerTwoInput;
+    // Define Player names and initial score. 
+    playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
+    playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
     gameHeader.classList.toggle("hidden");
-    console.log(playerOneName, playerTwoName);
+    cardContainer.classList.toggle("hidden");
+    console.log(playerOneName, playerTwoName, showHideSelector);
 
-   
+
+
 
 }
 
-function showHide() {
+function showHideCard() {
     buttons.classList.toggle("hidden");
     onePlayerScore.classList.toggle("hidden");
     console.log(buttons);
 }
 
-console.log(playerOneName, playerTwoName);
+
 
     // If player two is empty and show card number is selected, Toggle: show-front of card, one player score, game buttons, and cards. 
 

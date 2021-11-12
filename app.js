@@ -1,12 +1,13 @@
 console.log('[app.js] is working.');
 
 // set variables
-let player1 = '0';
-let player2 = '0';
+let player1 = 'PLayer 1:';
+let player2 = 'Player 2:';
 let mainScore = 'null';
 let player1Score = 'null';
 let player2Score = 'null';
 let cardValue = 10;
+const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
 const cardContainer = document.getElementById('card-table');
 const card = document.querySelectorAll('card');
@@ -20,6 +21,10 @@ const buttons = document.getElementById('game-buttons');
 
 // Start Game Button.
 function startGame() {
+
+    // If null print player 1 and player two. 
+    playerOneName.innerText = "Player 1";
+    playerTwoName.innterText = "Player 2";
     // Set player 1 name.
     let playerOneInput = document.getElementById('player-one-input').value;
     // Set player 2 name. 
@@ -31,6 +36,9 @@ function startGame() {
     playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
     playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
+    // If Name is 
+
+    // show header.
     gameHeader.classList.toggle("hidden");
     cardContainer.classList.toggle("hidden");
     console.log(playerOneName, playerTwoName, showHideSelector);
@@ -41,6 +49,9 @@ function startGame() {
             cardNumber.classList.toggle("hidden");
         } console.log(cardNumber);
     };
+
+    // Hide form. 
+    inputForm.classList.toggle('hidden');
 }
 
 function showHideCard() {

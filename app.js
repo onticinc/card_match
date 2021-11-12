@@ -1,11 +1,7 @@
 console.log('[app.js] is working.');
 
 // set variables
-let player1 = 'PLayer 1:';
-let player2 = 'Player 2:';
 let mainScore = 'null';
-let player1Score = 'null';
-let player2Score = 'null';
 let cardValue = 10;
 const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
@@ -30,19 +26,18 @@ function startGame() {
     let showHideSelector = document.getElementById('show-hide-selector').value;
 
     // Define Player names and initial score. 
-
     playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
     playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
-    // If null print player 1 and player two. 
+    // If null print player 1 and player 2. 
     if (playerOneName === null) {
         playerOneName.innerText = ("Player 1:" + playerOneScore);
         console.log(playerOneName);
     }
+
     if (playerTwoName === null) {
         playerTwoName.innterText = ("Player 2:" + playerTwoScore);
     }
-    
 
     // show header.
     gameHeader.classList.toggle("hidden");
@@ -52,32 +47,49 @@ function startGame() {
     // hide card numbers. 
     if (showHideSelector === '2') {
         for (let idx = 0; idx < cardNumberList.length; idx++) {
-                let cardNumber = cardNumberList[idx];
-                cardNumber.classList.toggle('hidden');
-            };
-            
-        } 
-    
+            let cardNumber = cardNumberList[idx];
+            cardNumber.classList.toggle('hidden');
+        };
+    }
+
     // Hide form. 
     inputForm.classList.toggle('hidden');
 };
+// End Start Function
 
-
+// Start Card Flip
 function showHideCard() {
-    card.card-front.classList.toggle("hidden");
-    console.log('card');
+    for (let idx = 0; idx < cardList.length; idx++) {
+        let card = cardList[idx];
+        card.addEventListener('click', function () {
+            console.log('click', "click on card");
+            console.log(card);
+            let firstChild = card.children[0];
+            let secondChild = card.children[1];
+            console.log(firstChild);
+            console.log(secondChild);
+            firstChild.classList.toggle('hidden');
+            secondChild.classList.toggle('hidden');
+        });
+       // console.log(card);
+    }
+}
+
+showHideCard();
+
+function compareCards(){
+
 }
 
 
+// card i just clicked
+// last card i clicked
+
+// compare values match?
+
 // // hide cards. 
 // if (showHideSelector === '2') {
-//     for (let idx = 0; idx < cardNumberList.length; idx++) {
-//         let card = cardNumberList[idx];   
-//         card.addEventListener('click', function(){
-//             card.classList.toggle('hidden');
-//         });
-//         console.log(card);
-//     } 
+//     
 // };
 
 // Figure out how to flip and turn one 

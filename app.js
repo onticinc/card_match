@@ -10,9 +10,9 @@ let cardValue = 10;
 const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
 const cardContainer = document.getElementById('card-table');
-const card = document.querySelectorAll('card');
-const cardFront = document.querySelectorAll('card-front');
-const cardNumberList = document.querySelectorAll('.h3-card-number');
+const cardList = document.querySelectorAll('.card');
+const cardFront = document.querySelectorAll('.card-front');
+const cardNumberList = document.querySelectorAll('.card-number');
 const playerOneName = document.getElementById('player-one-name');
 const playerTwoName = document.getElementById('player-two-name');
 const playerOneScore = document.getElementById("player-one-score");
@@ -22,9 +22,6 @@ const buttons = document.getElementById('game-buttons');
 // Start Game Button.
 function startGame() {
 
-    // If null print player 1 and player two. 
-    playerOneName.innerText = "Player 1";
-    playerTwoName.innterText = "Player 2";
     // Set player 1 name.
     let playerOneInput = document.getElementById('player-one-input').value;
     // Set player 2 name. 
@@ -33,10 +30,19 @@ function startGame() {
     let showHideSelector = document.getElementById('show-hide-selector').value;
 
     // Define Player names and initial score. 
+
     playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
     playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
-    // If Name is 
+    // If null print player 1 and player two. 
+    if (playerOneName === null) {
+        playerOneName.innerText = ("Player 1:" + playerOneScore);
+        console.log(playerOneName);
+    }
+    if (playerTwoName === null) {
+        playerTwoName.innterText = ("Player 2:" + playerTwoScore);
+    }
+    
 
     // show header.
     gameHeader.classList.toggle("hidden");
@@ -46,7 +52,8 @@ function startGame() {
     // hide card numbers. 
     if (showHideSelector === '2') {
         for (let idx = 0; idx < cardNumberList.length; idx++) {
-                card.classList.toggle('hidden');
+                let cardNumber = cardNumberList[idx];
+                cardNumber.classList.toggle('hidden');
             };
             
         } 
@@ -54,13 +61,15 @@ function startGame() {
     // Hide form. 
     inputForm.classList.toggle('hidden');
 };
+
+
 function showHideCard() {
     card.card-front.classList.toggle("hidden");
     console.log('card');
 }
 
 
-// // hide card numbers. 
+// // hide cards. 
 // if (showHideSelector === '2') {
 //     for (let idx = 0; idx < cardNumberList.length; idx++) {
 //         let card = cardNumberList[idx];   

@@ -29,15 +29,24 @@ function startGame() {
     playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
     playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
-    // If null print player 1 and player 2. 
-    if (playerOneName === null) {
-        playerOneName.innerText = ("Player 1:" + playerOneScore);
-        console.log(playerOneName);
-    }
+    // // If null print player 1 and player 2. 
+    // if (playerOneName === null) {
+    //     playerOneName.innerText = ("Player 1:" + playerOneScore);
+    //     console.log(playerOneName);
+    // }
 
-    if (playerTwoName === null) {
-        playerTwoName.innterText = ("Player 2:" + playerTwoScore);
-    }
+    // if (playerTwoName === null) {
+    //     playerTwoName.innterText = ("Player 2:" + playerTwoScore);
+    // }
+
+// check for value in name input. 
+//     if (inputtx.value.length == 0)
+//     { 
+//        alert("message");  	
+//        return false; 
+//     }  	
+//     return true; 
+//   } 
 
     // show header.
     gameHeader.classList.toggle("hidden");
@@ -63,15 +72,11 @@ function showHideCard() {
         let card = cardList[idx];
         card.addEventListener('click', function () {
             console.log('click', "click on card");
-            console.log(card);
             let firstChild = card.children[0];
             let secondChild = card.children[1];
-            console.log(firstChild);
-            console.log(secondChild);
             firstChild.classList.toggle('hidden');
             secondChild.classList.toggle('hidden');
         });
-       // console.log(card);
     }
 }
 
@@ -82,10 +87,17 @@ function compareCards(){
 }
 
 
+
 // card i just clicked
-// last card i clicked
+function getId(){
+    
+}
+
+// last card I clicked
 
 // compare values match?
+
+// add points to player. 
 
 // // hide cards. 
 // if (showHideSelector === '2') {

@@ -5,14 +5,19 @@ let mainScore = 'null';
 let cardValue = 10;
 let clickedCard = '';
 
+
+
 const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
 
+// Cards
 const cardContainer = document.getElementById('card-table');
 const cardList = document.querySelectorAll('.card');
 const cardFront = document.querySelectorAll('.card-front');
 const cardNumberList = document.querySelectorAll('.card-number');
 
+
+// Player Info
 const playerOneName = document.getElementById('player-one-name');
 const playerOneScore = document.getElementById("player-one-score");
 const playerTwoName = document.getElementById('player-two-name');
@@ -20,8 +25,157 @@ const playerTwoScore = document.getElementById("player-two-score");
 const playerTurn = '0';
 const playerChoice = '';
 
+
 const buttons = document.getElementById('game-buttons');
 const quickLookButton = document.getElementById('quick-look-button');
+
+const cardData = {
+
+    card1: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card2: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card3: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card4: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card5: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card6: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card7: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card8: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card9: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card10: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card11: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card12: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card13: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card14: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card15: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card16: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card17: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card18: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card19: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card20: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card21: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card22: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card23: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card24: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card25: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card26: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card27: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card28: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card29: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card30: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card31: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card25: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card25: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+    card25: {
+        cardId: "card-1",
+        faClass: "fa-dragon",
+    },
+
+
+};
+
+console.log(menu); // look for line 26
+
+
+
+
 
 // Start Game Button.
 function startGame() {
@@ -79,10 +233,11 @@ function showHideCard() {
     }
 }
 
-
 showHideCard();
 
-// show front of cards for short period of time. limit to two times. 
+
+
+// Quick Look Button - show front of cards for short period of time. limit to two times. 
 function quickLook() {
 
     for (let idx = 0; idx < cardList.length; idx++) {
@@ -139,9 +294,27 @@ function quickLook() {
 
 // compare cards = define a match between the divs.
 
-function compareCards() {
+// function compareCards() {
 
-}
+//     // run show hide function. 
+
+//     showHideCard(){
+//         const onClick = (event) => {
+//             console.log(event.srcElement.id);
+//         }
+//         window.addEventListener('click', onClick);
+//     }
+// }
+
+
+
+// // get card type.
+// let cardOne =
+//     // get card two. 
+//     let cardTwo = 
+
+// }
+
 
 
 

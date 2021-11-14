@@ -112,6 +112,7 @@ function quickLook() {
 };
 
 
+
 // // display players turn 
 // function displayPlayerTurn() {
 //                 let display = document.querySelector("players-turn");
@@ -137,6 +138,10 @@ function quickLook() {
 
 
 // compare cards = define a match between the divs.
+
+function compareCards() {
+
+}
 
 
 

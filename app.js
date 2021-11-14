@@ -4,17 +4,24 @@ console.log('[app.js] is working.');
 let mainScore = 'null';
 let cardValue = 10;
 let clickedCard = '';
+
 const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
+
 const cardContainer = document.getElementById('card-table');
 const cardList = document.querySelectorAll('.card');
 const cardFront = document.querySelectorAll('.card-front');
 const cardNumberList = document.querySelectorAll('.card-number');
+
 const playerOneName = document.getElementById('player-one-name');
-const playerTwoName = document.getElementById('player-two-name');
 const playerOneScore = document.getElementById("player-one-score");
+const playerTwoName = document.getElementById('player-two-name');
 const playerTwoScore = document.getElementById("player-two-score");
+const playerTurn = '0';
+const playerChoice = '';
+
 const buttons = document.getElementById('game-buttons');
+const quickLookButton = document.getElementById('quick-look-button');
 
 // Start Game Button.
 function startGame() {
@@ -31,7 +38,6 @@ function startGame() {
     playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
 
-
     // If null print player 1 and player 2. 
     if (playerOneInput === '') {
         playerOneName.innerText = ("Player 1: " + playerOneScore);
@@ -40,7 +46,6 @@ function startGame() {
     if (playerTwoInput === '') {
         playerTwoName.innerText = ("Player 2: " + playerTwoScore);
     }
-
 
 
     // show header.
@@ -65,7 +70,7 @@ function showHideCard() {
     for (let idx = 0; idx < cardList.length; idx++) {
         let card = cardList[idx];
         card.addEventListener('click', function () {
-            // console.log('click', "click on card");
+            //console.log('click', "click on card");
             let firstChild = card.children[0];
             let secondChild = card.children[1];
             firstChild.classList.toggle('hidden');
@@ -75,67 +80,59 @@ function showHideCard() {
 }
 
 
+showHideCard();
 
-// //Tic Tac Toe
-// //Global Variables
-// //Get input from user about which sign should be for playerOne.
-// //Set signs for both players.
-// //When user click on button it triggers play function()
-// //Play function detects who is playing this turn.
-// //Display Sign on that button accordingly.
-// var playerOneChoice;
-// var playerTwoChoice;
-// var playerTurn=1;
-// var matrix = [[], [], []];
-// var buttons = [[], [], []];
-// var row1;
-// var X = "X";
-// var O = "O";
-// var x;
-// var y;
-// var i;
 
-// //Input the matrix
-// for (i = 0; i <= 8; i++) {
-// 	switch (i) {
-// 	case 0: x=0; y=0; break;
-// 	case 1: x=0; y=1; break;
-// 	case 2: x=0; y=2; break;
-// 	case 3: x=1; y=0; break;
-// 	case 4: x=1; y=1; break;
-// 	case 5: x=1; y=2; break;
-// 	case 6: x=2; y=0; break;
-// 	case 7: x=2; y=1; break;
-// 	case 8: x=2; y=2; break;
-// 	}
+// show front of cards for short period of time. limit to two times. 
+function quickLook() {
+    for (let idx = 0; idx < cardList.length; idx++) {
+        let card = cardList[idx];
+        let button = quickLookButton;
+        quickLookButton.addEventListener('click', function () {
+            
+            console.log('click', "click on card");
+            // let firstChild = card.children[0];
+            // let secondChild = card.children[1];
+            // firstChild.classList.toggle('hidden');
+            // secondChild.classList.toggle('hidden');
+        });
 
-// 	matrix[x][y] = document.querySelector(".cell"+i);
-// 	buttons[x][y] = document.querySelector("#b"+i);
-// 	//matrix[x][y].innerHTML = i + " " + x + " " + y;
-// }
+        setTimeout(function () { }, 3000);
 
-// function play() {
-// displayOutput();
-// incPlayerTurn();
-// }
+        firstChild.classList.toggle('hidden');
+        secondChild.classList.toggle('hidden');
+    }
+}
 
-// function displayTurn() {
-//     var display = document.querySelector("#playerTurn");
-//     if (playerTurn%2==0)
-//         display.innerHTML ="Its player two turn";
-// 	else
-// 		display.innerHTML ="Its player one turn";
-// }    
+
+
+
+
+
+
+
+// // display players turn
+// function displayPlayerTurn() {
+//         let display = document.querySelector("players-turn");
+//         if (playerTurn %2==0)
+//         console.log(playerTurn);
+//             display.innerHTML = (playerTwoInput + "'s turn");
+//     	else
+//     		display.innerHTML = (playerOneInput + "'s turn");
+//     }    
 // function incPlayerTurn(){
-//     playerTurn++;
-// }
+//         playerTurn++;
+//     }
 
 // function displayOutput(){
-// 	if (playerTurn%2 == 1)
-// 		this.innerHTML = playerOneChoice;
-// 	else
-// 		this.innerHTML = playerTwoChoice;
-// }
+//         if (playerTurn%2 == 1)
+//             this.innerHTML = playerOneChoice;
+//         else
+//             this.innerHTML = playerTwoChoice;
+//     }
+
+
+
 
 
 // function setO(){
@@ -180,8 +177,8 @@ function showHideCard() {
 
 
 // function compareCards(){
-    
-    
+
+
 //     let currentPlayer =
 //     let cardOneId = 'j';
 //     let cartTwoId = 'j';

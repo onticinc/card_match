@@ -82,57 +82,63 @@ function showHideCard() {
 
 showHideCard();
 
-
 // show front of cards for short period of time. limit to two times. 
 function quickLook() {
+
     for (let idx = 0; idx < cardList.length; idx++) {
         let card = cardList[idx];
-        let button = quickLookButton;
 
-        button.addEventListener('click', function () {
-            
-            console.log('click', "click on card");
-            // let firstChild = card.children[0];
-            // let secondChild = card.children[1];
-            // firstChild.classList.toggle('hidden');
-            // secondChild.classList.toggle('hidden');
-        });
+        let firstChild = card.children[0];
+        let secondChild = card.children[1];
 
-        // setTimeout(function () { }, 3000);
-
-        // firstChild.classList.toggle('hidden');
-        // secondChild.classList.toggle('hidden');
+        firstChild.classList.toggle('hidden');
+        secondChild.classList.toggle('hidden');
     }
-}
 
-quickLook();
+    setTimeout(function () {
+
+        for (let idx = 0; idx < cardList.length; idx++) {
+            let card = cardList[idx];
+
+            let firstChild = card.children[0];
+            let secondChild = card.children[1];
+
+            firstChild.classList.toggle('hidden');
+            secondChild.classList.toggle('hidden');
+        }
+
+    }, 3000)
+
+};
 
 
-// // display players turn
+// // display players turn 
 // function displayPlayerTurn() {
-//         let display = document.querySelector("players-turn");
-//         if (playerTurn %2==0)
-//         console.log(playerTurn);
-//             display.innerHTML = (playerTwoInput + "'s turn");
-//     	else
-//     		display.innerHTML = (playerOneInput + "'s turn");
-//     }    
-// function incPlayerTurn(){
-//         playerTurn++;
-//     }
+//                 let display = document.querySelector("players-turn");
+//                 if (playerTurn % 2 == 0) {
+//                     console.log(playerTurn);
+//                     display.innerHTML = (playerTwoInput + "'s turn");
+//                 }
+//                 else {
+//                     display.innerHTML = (playerOneInput + "'s turn");
+//                 }
+//             }
+// function incPlayerTurn() {
+//                 playerTurn++;
+//             }
 
 
-// function displayOutput(){
-//         if (playerTurn%2 == 1)
-//             this.innerHTML = playerOneChoice;
-//         else
-//             this.innerHTML = playerTwoChoice;
-//     }
+// function displayOutput() {
+//                 if (playerTurn % 2 == 1)
+//                     this.innerHTML = playerOneChoice;
+//                 else
+//                     this.innerHTML = playerTwoChoice;
+//             }
 
 
+// compare cards = define a match between the divs.
 
 
-// compare cards
 
 // card i just clicked
 
@@ -148,14 +154,3 @@ quickLook();
 
 
 // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  
-
-
-
-
-
-
-
-
-
-
-

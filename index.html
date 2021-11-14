@@ -22,7 +22,6 @@
   <body>
     <!-- Start Main Container -->
     <div class="main-container content m-t-15">
-      
       <div class="row">
         <h1 id="game-title">Flash Card Memory Game</h1>
       </div>
@@ -105,36 +104,41 @@
               <button id="reset-game-button" class="button is-success">
                 Reset Game
               </button>
-              <button id="quick-look-button" class="button is-warning">
+              <button
+                type="button"
+                id="quick-look-button"
+                class="button is-warning"
+                onclick="quickLook()"
+              >
                 Quick Look
               </button>
             </div>
-            <div class='row m-t-15 m-b-15'>
-                <button class='button is-info' id='players-turn'>It is Player Ones Turn</button>
+            <div class="row m-t-15 m-b-15">
+              <button class="button is-info" id="players-turn">
+                It is Player Ones Turn
+              </button>
             </div>
           </div>
-            
-            <!-- Score  -->
-            <div id="names-and-score" class="names-and-score m-t-15">
-              <!-- <div id="total-score">
+
+          <!-- Score  -->
+          <div id="names-and-score" class="names-and-score m-t-15">
+            <!-- <div id="total-score">
                 <h2 id="total-score">Total Points Available:</h2>
               </div> -->
-              <div id="player-one-info">
-                  <h2 id="player-one-name">Player One:</h2>
-              </div>
-              <div id="player-two-info">
-                  <h2 id="player-two-name">Player Two:</h2>
-              </div>
-              
+            <div id="player-one-info">
+              <h2 id="player-one-name">Player One:</h2>
+            </div>
+            <div id="player-two-info">
+              <h2 id="player-two-name">Player Two:</h2>
             </div>
           </div>
+        </div>
       </div>
 
       <!-- End Game Header -->
 
       <!-- Start Main Grid Container -->
       <div id="card-table" class="grid-container hidden card-table m-t-15">
-
         <!-- Start Card 1 -- Dragon -->
         <div class="card" id="card-1">
           <!-- Start Card Back -->

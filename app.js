@@ -88,7 +88,8 @@ function quickLook() {
     for (let idx = 0; idx < cardList.length; idx++) {
         let card = cardList[idx];
         let button = quickLookButton;
-        quickLookButton.addEventListener('click', function () {
+
+        button.addEventListener('click', function () {
             
             console.log('click', "click on card");
             // let firstChild = card.children[0];
@@ -97,18 +98,14 @@ function quickLook() {
             // secondChild.classList.toggle('hidden');
         });
 
-        setTimeout(function () { }, 3000);
+        // setTimeout(function () { }, 3000);
 
-        firstChild.classList.toggle('hidden');
-        secondChild.classList.toggle('hidden');
+        // firstChild.classList.toggle('hidden');
+        // secondChild.classList.toggle('hidden');
     }
 }
 
-
-
-
-
-
+quickLook();
 
 
 // // display players turn
@@ -124,6 +121,7 @@ function quickLook() {
 //         playerTurn++;
 //     }
 
+
 // function displayOutput(){
 //         if (playerTurn%2 == 1)
 //             this.innerHTML = playerOneChoice;
@@ -134,58 +132,7 @@ function quickLook() {
 
 
 
-
-// function setO(){
-// 	playerOneChoice="O";
-// 	playerTwoChoice="X"
-// }
-// function setX(){
-// 	playerOneChoice="X";
-// 	playerTwoChoice="O"
-// }
-
-// function displayO(){
-// var butt = document.getElementsByTagName("button");
-// var buttonsCount = buttons.length;
-// for (var i = 0; i <= buttonsCount; i += 1) {
-//  butt[i].onclick = function(e) {
-//  this.innerHTML ="O";
-//     };
-// }
-// }
-
-// function displayX(){
-// var butt = document.getElementsByTagName("button");
-// var buttonsCount = buttons.length;
-// for (var i = 0; i <= buttonsCount; i += 1) {
-//     butt[i].onclick = function(e) {
-//  this.innerHTML ="X";
-//     };
-// }
-// }
-
-// playerchoice.addEventListener("change", function(event) {
-//     if (event.target.value === "O")
-//         players.reverse();
-
-//     this.disabled = true;
-//     playarea.style.display = "block";
-
-//     displayTurn();
-// }, false);
-
-
-
-// function compareCards(){
-
-
-//     let currentPlayer =
-//     let cardOneId = 'j';
-//     let cartTwoId = 'j';
-//     showHideCard();
-// }
-
-
+// compare cards
 
 // card i just clicked
 
@@ -195,7 +142,9 @@ function quickLook() {
 
 // add points to player. 
 
+// alert card match
 
+// alert winner
 
 
 // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  
@@ -204,10 +153,9 @@ function quickLook() {
 
 
 
-// alert card match
 
 
 
 
-// alert winner
+
 

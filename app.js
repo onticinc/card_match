@@ -29,6 +29,7 @@ const playerChoice = '';
 const buttons = document.getElementById('game-buttons');
 const quickLookButton = document.getElementById('quick-look-button');
 
+// Card Object. 
 const cardData = {
 
     card1: {
@@ -128,140 +129,147 @@ const cardData = {
     },
     card20: {
         cardId: "card-20",
-        faClass: "fa-dragon",
+        title: "Tractor",
+        faClass: "fa-tractor",
     },
     card21: {
         cardId: "card-21",
-        faClass: "fa-dragon",
+        title: "Spider",
+        faClass: "fa-spider",
     },
     card22: {
         cardId: "card-22",
-        faClass: "fa-dragon",
+        title: "Dog",
+        faClass: "fa-dog",
     },
     card23: {
         cardId: "card-23",
-        faClass: "fa-dragon",
+        title: "Alien",
+        faClass: "fa-reddit-alien",
     },
     card24: {
         cardId: "card-24",
-        faClass: "fa-dragon",
+        title: "Hippo",
+        faClass: "fa-hippo",
     },
     card25: {
         cardId: "card-25",
+        title: "Frog",
         faClass: "fa-dragon",
     },
     card26: {
         cardId: "card-26",
-        faClass: "fa-dragon",
+        title: "Tree",
+        faClass: "fa-tree",
     },
     card27: {
         cardId: "card-27",
-        faClass: "fa-dragon",
+        title: "Penguin",
+        faClass: "fa-linux",
     },
     card28: {
         cardId: "card-28",
+        title: "Dragon",
         faClass: "fa-dragon",
     },
     card29: {
         cardId: "card-29",
-        faClass: "fa-dragon",
+        title: "Monkey",
+        faClass: "fa-mailchimp",
     },
     card30: {
         cardId: "card-30",
-        faClass: "fa-dragon",
+        title: "Fish",
+        faClass: "fa-fish",
     },
     card31: {
         cardId: "card-31",
-        faClass: "fa-dragon",
+        title: "Apple",
+        faClass: "fa-apple-alt",
     },
     card32: {
         cardId: "card-32",
-        faClass: "fa-dragon",
+        title: "Music",
+        faClass: "fa-itunes-note",
     },
 
 
 };
 
-console.log(cardData);
+// Play with data.
+for (let key in menu) {
+    console.log(key);
+    let pizza = menu[key];
+    console.log(pizza);
+
+    console.log(cardData);
 
 
 
 
 
-// Start Game Button.
-function startGame() {
+    // Start Game Button.
+    function startGame() {
 
-    // Set player 1 name.
-    let playerOneInput = document.getElementById('player-one-input').value;
-    // Set player 2 name. 
-    let playerTwoInput = document.getElementById('player-two-input').value;
-    // Set show hide on front of the card. 
-    let showHideSelector = document.getElementById('show-hide-selector').value;
+        // Set player 1 name.
+        let playerOneInput = document.getElementById('player-one-input').value;
+        // Set player 2 name. 
+        let playerTwoInput = document.getElementById('player-two-input').value;
+        // Set show hide on front of the card. 
+        let showHideSelector = document.getElementById('show-hide-selector').value;
 
-    // Define Player names and initial score. 
-    playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
-    playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
+        // Define Player names and initial score. 
+        playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
+        playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
 
 
-    // If null print player 1 and player 2. 
-    if (playerOneInput === '') {
-        playerOneName.innerText = ("Player 1: " + playerOneScore);
+        // If null print player 1 and player 2. 
+        if (playerOneInput === '') {
+            playerOneName.innerText = ("Player 1: " + playerOneScore);
+        }
+
+        if (playerTwoInput === '') {
+            playerTwoName.innerText = ("Player 2: " + playerTwoScore);
+        }
+
+
+        // show header.
+        gameHeader.classList.toggle("hidden");
+        cardContainer.classList.toggle("hidden");
+
+        // hide card numbers. 
+        if (showHideSelector === '2') {
+            for (let idx = 0; idx < cardNumberList.length; idx++) {
+                let cardNumber = cardNumberList[idx];
+                cardNumber.classList.toggle('hidden');
+            };
+        }
+
+        // Hide form. 
+        inputForm.classList.toggle('hidden');
+    };
+    // End Start Function
+
+    // Start Card Flip
+    function showHideCard() {
+        for (let idx = 0; idx < cardList.length; idx++) {
+            let card = cardList[idx];
+            card.addEventListener('click', function () {
+                //console.log('click', "click on card");
+                let firstChild = card.children[0];
+                let secondChild = card.children[1];
+                firstChild.classList.toggle('hidden');
+                secondChild.classList.toggle('hidden');
+            });
+        }
     }
 
-    if (playerTwoInput === '') {
-        playerTwoName.innerText = ("Player 2: " + playerTwoScore);
-    }
-
-
-    // show header.
-    gameHeader.classList.toggle("hidden");
-    cardContainer.classList.toggle("hidden");
-
-    // hide card numbers. 
-    if (showHideSelector === '2') {
-        for (let idx = 0; idx < cardNumberList.length; idx++) {
-            let cardNumber = cardNumberList[idx];
-            cardNumber.classList.toggle('hidden');
-        };
-    }
-
-    // Hide form. 
-    inputForm.classList.toggle('hidden');
-};
-// End Start Function
-
-// Start Card Flip
-function showHideCard() {
-    for (let idx = 0; idx < cardList.length; idx++) {
-        let card = cardList[idx];
-        card.addEventListener('click', function () {
-            //console.log('click', "click on card");
-            let firstChild = card.children[0];
-            let secondChild = card.children[1];
-            firstChild.classList.toggle('hidden');
-            secondChild.classList.toggle('hidden');
-        });
-    }
-}
-
-showHideCard();
+    showHideCard();
 
 
 
-// Quick Look Button - show front of cards for short period of time. limit to two times. 
-function quickLook() {
-
-    for (let idx = 0; idx < cardList.length; idx++) {
-        let card = cardList[idx];
-
-        let firstChild = card.children[0];
-        let secondChild = card.children[1];
-
-        firstChild.classList.toggle('hidden');
-        secondChild.classList.toggle('hidden');
-    }
-
-    setTimeout(function () {
+    // Quick Look Button - show front of cards for short period of time. limit to two times. 
+    function quickLook() {
 
         for (let idx = 0; idx < cardList.length; idx++) {
             let card = cardList[idx];
@@ -273,9 +281,21 @@ function quickLook() {
             secondChild.classList.toggle('hidden');
         }
 
-    }, 3000)
+        setTimeout(function () {
 
-};
+            for (let idx = 0; idx < cardList.length; idx++) {
+                let card = cardList[idx];
+
+                let firstChild = card.children[0];
+                let secondChild = card.children[1];
+
+                firstChild.classList.toggle('hidden');
+                secondChild.classList.toggle('hidden');
+            }
+
+        }, 3000)
+
+    };
 
 
 

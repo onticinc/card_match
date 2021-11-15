@@ -33,145 +33,156 @@ const cardData = {
 
     card1: {
         cardId: "card-1",
+        title: "Dragon",
         faClass: "fa-dragon",
     },
     card2: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-2",
+        title: "Cat",
+        faClass: "fa-cat",
     },
     card3: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-3",
+        title: "Android",
+        faClass: "fa-android",
     },
     card4: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-4",
+        title: "Frog",
+        faClass: "fa-frog",
     },
     card5: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-5",
+        title: "Fish",
+        faClass: "fa-fish",
     },
     card6: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-6",
+        title: "Bird",
+        faClass: "fa-crow",
     },
     card7: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-7",
+        title: "Hippo",
+        faClass: "fa-hippo",
     },
     card8: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-8",
+        title: "Horse",
+        faClass: "fa-horse",
     },
     card9: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-9",
+        title: "Spider",
+        faClass: "fa-spider",
     },
     card10: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-10",
+        title: "Apple",
+        faClass: "fa-apple-alt",
     },
     card11: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-11",
+        title: "Tractor",
+        faClass: "fa-tractor",
     },
     card12: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-12",
+        title: "Tree",
+        faClass: "fa-tree",
     },
     card13: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-13",
+        title: "Music",
+        faClass: "fa-itunes-note",
     },
     card14: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-14",
+        title: "Monkey",
+        faClass: "fa-mailchimp",
     },
     card15: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-15",
+        title: "Penguin",
+        faClass: "fa-linux",
     },
     card16: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-16",
+        Title: "Alien",
+        faClass: "fa-reddit-alien",
     },
     card17: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-17",
+        title: "Horse",
+        faClass: "fa-horse",
     },
     card18: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-18",
+        title: "Cat",
+        faClass: "fa-cat",
     },
     card19: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
+        cardId: "card-19",
+        title: "Apple",
+        faClass: "fa-apple-alt",
     },
     card20: {
-        cardId: "card-1",
+        cardId: "card-20",
         faClass: "fa-dragon",
     },
     card21: {
-        cardId: "card-1",
+        cardId: "card-21",
         faClass: "fa-dragon",
     },
     card22: {
-        cardId: "card-1",
+        cardId: "card-22",
         faClass: "fa-dragon",
     },
     card23: {
-        cardId: "card-1",
+        cardId: "card-23",
         faClass: "fa-dragon",
     },
     card24: {
-        cardId: "card-1",
+        cardId: "card-24",
         faClass: "fa-dragon",
     },
     card25: {
-        cardId: "card-1",
+        cardId: "card-25",
         faClass: "fa-dragon",
     },
     card26: {
-        cardId: "card-1",
+        cardId: "card-26",
         faClass: "fa-dragon",
     },
     card27: {
-        cardId: "card-1",
+        cardId: "card-27",
         faClass: "fa-dragon",
     },
     card28: {
-        cardId: "card-1",
+        cardId: "card-28",
         faClass: "fa-dragon",
     },
     card29: {
-        cardId: "card-1",
+        cardId: "card-29",
         faClass: "fa-dragon",
     },
     card30: {
-        cardId: "card-1",
+        cardId: "card-30",
         faClass: "fa-dragon",
     },
     card31: {
-        cardId: "card-1",
+        cardId: "card-31",
         faClass: "fa-dragon",
     },
-    card25: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
-    },
-    card25: {
-        cardId: "card-1",
-        faClass: "fa-dragon",
-    },
-    card25: {
-        cardId: "card-1",
+    card32: {
+        cardId: "card-32",
         faClass: "fa-dragon",
     },
 
 
 };
 
-console.log(menu); // look for line 26
+console.log(cardData);
 
 
 

@@ -329,7 +329,8 @@ function showHideCard() {
                         console.log(cardOne)
                         const domCardOne = cardList[cardOne.index]
                         const domCardTwo = cardList[cardTwo.index]
-                        // game state reset the what cards are selected. 
+
+
                         let domCardOneFirstChild = domCardOne.children[0];
                         let domCardOneSecondChild = domCardOne.children[1];
                         domCardOneFirstChild.classList.toggle('hidden');
@@ -409,40 +410,6 @@ function displayPlayerTurn() {
 
     playerTurn++;
 }
-
-// function displayOutput() {
-//     if (playerTurn % 2 == 1)
-
-//     else
-
-// }
-
-// compare cards = define a match between the divs.
-
-// function compareCards() {
-
-//     // run show hide function. 
-
-//     showHideCard(){
-//         const onClick = (event) => {
-//             console.log(event.srcElement.id);
-//         }
-//     }
-// }
-
-
-
-// card i just clicked
-
-// last card I clicked
-
-// compare values match?
-
-// add points to player. 
-
-// alert card match
-
-// alert winner
 
 
 // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  

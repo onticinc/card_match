@@ -1,4 +1,4 @@
-console.log('[app.js] is working.');
+// console.log('[app.js] is working.');
 
 const PLAYER_ONE = 0;
 const PLAYER_TWO = 1;
@@ -205,29 +205,26 @@ const cardData = {
 
 };
 
+// create game state.
 const gameState = {
-    turn: PLAYER_ONE,
+    turn: PLAYER_ONE, // start with player one. 
     players: {
 
-        [PLAYER_ONE]: {
+        [PLAYER_ONE]: { // set initial value for player one.
             score: 0,
             playerName: '',
         },
 
-        [PLAYER_TWO]: {
+        [PLAYER_TWO]: { // set initial value for player two. 
             score: 0,
             playerName: '',
         },
     },
-    selectedCards: [],
-    matchedCards: [],
+    selectedCards: [], // empty array for selected cards. 
+    matchedCards: [], // empte array for matched cards. 
 }
 
 // set variables
-let mainScore = 'null';
-
-
-let clickedCard = '';
 
 const inputForm = document.getElementById('input-form');
 const gameHeader = document.getElementById('game-header');
@@ -238,10 +235,11 @@ const cardList = document.querySelectorAll('.card');
 const cardFront = document.querySelectorAll('.card-front');
 const cardNumberList = document.querySelectorAll('.card-number');
 
-let canClick = true;
+
+let canClick = true; // used to disable clicking the same card twice to create a match. 
 
 
-// Player Info
+// Player Info 
 const playerOneName = document.getElementById('player-one-name');
 const playerOneScore = document.getElementById("player-one-score");
 const playerTurnElement = document.getElementById("players-turn-message");
@@ -287,20 +285,19 @@ function startGame() {
 // End Start Function
 
 // Update Score
-
 function updateScore() {
     playerOneName.innerText = ((gameState.players[PLAYER_ONE].name || "Player 1 ") + ": " + gameState.players[PLAYER_ONE].score);
     playerTwoName.innerText = ((gameState.players[PLAYER_TWO].name || "Player 2 ") + ": " + gameState.players[PLAYER_TWO].score);
 
-}
+} // Initializes score and inserts player 1 and player 2 into the board if left null. 
 
 function updatePlayerTurn() {
     if (gameState.turn === PLAYER_ONE) {
-        playerTurnElement.innerText = "it's " + (gameState.players[PLAYER_ONE].name || "Player 1") + " turn";
+        playerTurnElement.innerText = "it is " + (gameState.players[PLAYER_ONE].name || "Player 1's") + " turn";
     } else {
-        playerTurnElement.innerText = "It's " + (gameState.players[PLAYER_TWO].name || "Player 2") + " turn";
+        playerTurnElement.innerText = "It is " + (gameState.players[PLAYER_TWO].name || "Player 2's") + " turn";
     }
-}
+} // Sets player turn. 
 
 
 // Start Card Flip
@@ -312,7 +309,7 @@ function showHideCard() {
             //console.log('click', "click on card");
             let cardId = card.id;
             const hasCards = gameState.selectedCards.length;
-            if (!canClick || (hasCards && gameState.selectedCards[0] === cardId)) {
+            if (!canClick || (hasCards && gameState.selectedCards[0] === cardId)) { // checks can click status.
                 return;
             }
             gameState.selectedCards.push(cardId)

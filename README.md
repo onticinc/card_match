@@ -2,11 +2,11 @@
 
 ## SEI-1025: Michael Smith
 
-\*\* Set game board by entering player names and selecting if you want to show the card numbers or hide them.
+### Set game board by entering player names and selecting if you want to show the card numbers or hide them.
 
-You get 10 points when you match two of the same cards.
+### You get 10 points when you match two of the same cards.
 
-The player with the most points wins. \*\*
+### The player with the most points wins.
 
 Card icons are pulled from here.
 https://www.w3schools.com/icons/icons_reference.asp

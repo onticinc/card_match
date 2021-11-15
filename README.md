@@ -2,4 +2,13 @@
 
 ## SEI-1025: Michael Smith
 
-** Set game board by endering PLayer 1 and Player 2 names. You can also choose if you want to show the card number or hide it. You get 10 points when you match two of the same cards. The player with the most matches wins. **
+\*\* Set game board by entering player names and selecting if you want to show the card numbers or hide them.
+
+You get 10 points when you match two of the same cards.
+
+The player with the most points wins. \*\*
+
+Card icons are pulled from here.
+https://www.w3schools.com/icons/icons_reference.asp
+
+Tried using Font Awesome 6 and they just implimented a new process. That threw me off for a few hours before I gave up and reverted back to version 4.

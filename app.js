@@ -1,25 +1,30 @@
 console.log('[app.js] is working.');
 
+const PLAYER_ONE = 0;
+const PLAYER_TWO = 1;
+const CARD_VALUE = 10;
+
+
 // Card Object. 
 const cardData = {
 
-    card1: {
+    "card-1": {
         cardId: "card-1",
         title: "Dragon",
         faClass: "fa-dragon",
-        clickCount: "0",
+        index: 1,
     },
-    card2: {
+    "card-2": {
         cardId: "card-2",
         title: "Cat",
         faClass: "fa-cat",
-        clickCount: "0",
+        index: 2,
     },
-    card3: {
+    "card-3": {
         cardId: "card-3",
-        title: "Android",
-        faClass: "fa-android",
-        clickCount: "0",
+        title: "Dog",
+        faClass: "fa-dog",
+        index: 3,
     },
     card4: {
         cardId: "card-4",
@@ -129,11 +134,11 @@ const cardData = {
         faClass: "fa-spider",
         clickCount: "0",
     },
-    card22: {
+    "card-22": {
         cardId: "card-22",
         title: "Dog",
         faClass: "fa-dog",
-        clickCount: "0",
+        index: 22,
     },
     card23: {
         cardId: "card-23",
@@ -150,7 +155,7 @@ const cardData = {
     card25: {
         cardId: "card-25",
         title: "Frog",
-        faClass: "fa-dragon",
+        faClass: "fa-frog",
         clickCount: "0",
     },
     card26: {
@@ -165,11 +170,12 @@ const cardData = {
         faClass: "fa-linux",
         clickCount: "0",
     },
-    card28: {
+
+    "card-28": {
         cardId: "card-28",
         title: "Dragon",
         faClass: "fa-dragon",
-        clickCount: "0",
+        index: 28,
     },
     card29: {
         cardId: "card-29",
@@ -198,10 +204,28 @@ const cardData = {
 
 };
 
+const gameState = {
+    turn: PLAYER_ONE,
+    players: {
+
+        [PLAYER_ONE]: {
+            score: 0,
+            playerName: '',
+        },
+
+        [PLAYER_TWO]: {
+            score: 0,
+            playerName: '',
+        },
+    },
+    selectedCards: [],
+    matchedCards: [],
+}
+
 // set variables
 let mainScore = 'null';
 
-let cardValue = 10;
+
 let clickedCard = '';
 
 const inputForm = document.getElementById('input-form');
@@ -213,44 +237,34 @@ const cardList = document.querySelectorAll('.card');
 const cardFront = document.querySelectorAll('.card-front');
 const cardNumberList = document.querySelectorAll('.card-number');
 
+let canClick = true;
+
 
 // Player Info
 const playerOneName = document.getElementById('player-one-name');
 const playerOneScore = document.getElementById("player-one-score");
+const playerTurnElement = document.getElementById("players-turn-message");
 const playerTwoName = document.getElementById('player-two-name');
 const playerTwoScore = document.getElementById("player-two-score");
-const playerTurn = '0';
-const playerChoice = '';
-
 
 const buttons = document.getElementById('game-buttons');
 const quickLookButton = document.getElementById('quick-look-button');
+
 
 
 // Start Game Button.
 function startGame() {
 
     // Set player 1 name.
-    let playerOneInput = document.getElementById('player-one-input').value;
+    gameState.players[PLAYER_ONE].name = document.getElementById('player-one-input').value;
     // Set player 2 name. 
-    let playerTwoInput = document.getElementById('player-two-input').value;
+    gameState.players[PLAYER_TWO].name = document.getElementById('player-two-input').value;
     // Set show hide on front of the card. 
     let showHideSelector = document.getElementById('show-hide-selector').value;
 
     // Define Player names and initial score. 
-    playerOneName.innerText = (playerOneInput + ": " + playerOneScore);
-    playerTwoName.innerText = (playerTwoInput + ": " + playerTwoScore);
-
-
-    // If null print player 1 and player 2. 
-    if (playerOneInput === '') {
-        playerOneName.innerText = ("Player 1: " + playerOneScore);
-    }
-
-    if (playerTwoInput === '') {
-        playerTwoName.innerText = ("Player 2: " + playerTwoScore);
-    }
-
+    playerOneName.innerText = ((gameState.players[PLAYER_ONE].name || "Player 1 ") + ": " + gameState.players[PLAYER_ONE].score);
+    playerTwoName.innerText = ((gameState.players[PLAYER_TWO].name || "Player 2 ") + ": " + gameState.players[PLAYER_TWO].score);
 
     // show header.
     gameHeader.classList.toggle("hidden");
@@ -266,15 +280,81 @@ function startGame() {
 
     // Hide form. 
     inputForm.classList.toggle('hidden');
+
+    updatePlayerTurn();
 };
 // End Start Function
+
+// Update Score
+
+function updateScore() {
+    playerOneName.innerText = ((gameState.players[PLAYER_ONE].name || "Player 1 ") + ": " + gameState.players[PLAYER_ONE].score);
+    playerTwoName.innerText = ((gameState.players[PLAYER_TWO].name || "Player 2 ") + ": " + gameState.players[PLAYER_TWO].score);
+
+}
+
+function updatePlayerTurn() {
+    if (gameState.turn === PLAYER_ONE) {
+        playerTurnElement.innerText = "it's " + (gameState.players[PLAYER_ONE].name || "Player 1") + " turn";
+    } else {
+        playerTurnElement.innerText = "It's " + (gameState.players[PLAYER_TWO].name || "Player 2") + " turn";
+    }
+}
+
 
 // Start Card Flip
 function showHideCard() {
     for (let idx = 0; idx < cardList.length; idx++) {
         let card = cardList[idx];
+
         card.addEventListener('click', function () {
             //console.log('click', "click on card");
+            let cardId = card.id;
+            const hasCards = gameState.selectedCards.length;
+            if (!canClick || (hasCards && gameState.selectedCards[0] === cardId)) {
+                return;
+            }
+            gameState.selectedCards.push(cardId)
+
+            if (gameState.selectedCards.length === 2) {
+                const cardOne = cardData[gameState.selectedCards[0]]
+                const cardTwo = cardData[gameState.selectedCards[1]]
+                if (cardOne.faClass === cardTwo.faClass) {
+                    gameState.players[gameState.turn].score += CARD_VALUE;
+                    updateScore();
+                    gameState.matchedCards = [...gameState.matchedCards, ...gameState.selectedCards]
+                } else {
+                    canClick = false;
+                    setTimeout(function () {
+                        canClick = true;
+                        console.log(cardList);
+                        console.log(cardOne)
+                        const domCardOne = cardList[cardOne.index - 1]
+                        const domCardTwo = cardList[cardTwo.index - 1]
+                        // game state reset the what cards are selected. 
+                        let domCardOneFirstChild = domCardOne.children[0];
+                        let domCardOneSecondChild = domCardOne.children[1];
+                        domCardOneFirstChild.classList.toggle('hidden');
+                        domCardOneSecondChild.classList.toggle('hidden');
+
+                        let domCardTwoFirstChild = domCardTwo.children[0];
+                        let domCardTwoSecondChild = domCardTwo.children[1];
+                        domCardTwoFirstChild.classList.toggle('hidden');
+                        domCardTwoSecondChild.classList.toggle('hidden');
+
+                        if (gameState.turn === PLAYER_ONE) {
+                            gameState.turn = PLAYER_TWO;
+                        } else {
+                            gameState.turn = PLAYER_ONE;
+                        }
+
+                        updatePlayerTurn();
+                    }, 1000)
+                }
+
+                gameState.selectedCards = [];
+            }
+
             let firstChild = card.children[0];
             let secondChild = card.children[1];
             firstChild.classList.toggle('hidden');
@@ -282,6 +362,8 @@ function showHideCard() {
         });
     }
 }
+
+
 
 showHideCard();
 

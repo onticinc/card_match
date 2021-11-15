@@ -11,4 +11,4 @@
 Card icons are pulled from here.
 https://www.w3schools.com/icons/icons_reference.asp
 
-Tried using Font Awesome 6 and they just implimented a new process. That threw me off for a few hours before I gave up and reverted back to version 4.
+Tried using Font Awesome 6 and they just implimented a new process. That threw me off for a few hours so I gave up and reverted back to version 5.

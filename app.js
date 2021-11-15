@@ -13,200 +13,198 @@ const cardData = {
         title: "Dragon",
         faClass: "fa-dragon",
         index: 0,
-    },
+    }, // matching card is 
     "card-1": {
         cardId: "card-1",
         title: "Cat",
         faClass: "fa-cat",
         index: 1,
-    },
+    }, // matching card is 
     "card-2": {
         cardId: "card-2",
         title: "Dog",
         faClass: "fa-dog",
         index: 2,
-    },
+    }, // matching card is 
     "card-3": {
         cardId: "card-3",
         title: "Frog",
         faClass: "fa-frog",
         index: 3,
-    },
+    }, // matching card is 
     "card-4": {
         cardId: "card-4",
         title: "Fish",
         faClass: "fa-fish",
         index: 4,
-    },
+    }, // matching card is 
     "card-5": {
         cardId: "card-5",
         title: "Bird",
         faClass: "fa-crow",
         index: 5,
-    },
+    }, // matching card is 
     "card-6": {
         cardId: "card-6",
         title: "Hippo",
         faClass: "fa-hippo",
         index: 6,
-    },
+    }, // matching card is 
     "card-7": {
         cardId: "card-7",
         title: "Horse",
         faClass: "fa-horse",
         index: 7,
-    },
+    }, // matching card is 
     "card-8": {
         cardId: "card-8",
         title: "Spider",
         faClass: "fa-spider",
         index: 8,
-    },
+    }, // matching card is 
     "card-9": {
         cardId: "card-9",
         title: "Apple",
         faClass: "fa-apple-alt",
         index: 9,
-    },
+    }, // matching card is 
     "card-10": {
         cardId: "card-10",
         title: "Tractor",
         faClass: "fa-tractor",
         index: 10,
-    },
+    }, // matching card is 
     "card-11": {
         cardId: "card-11",
         title: "Tree",
         faClass: "fa-tree",
         index: 11,
-    },
+    }, // matching card is 
     "card-12": {
         cardId: "card-12",
         title: "Music",
         faClass: "fa-itunes-note",
         index: 12,
-    },
+    }, // matching card is 
     "card-13": {
         cardId: "card-13",
         title: "Monkey",
         faClass: "fa-mailchimp",
         index: 13,
-    },
+    }, // matching card is 
     "card-14": {
         cardId: "card-14",
         title: "Penguin",
         faClass: "fa-linux",
         index: 14,
-    },
+    }, // matching card is 
     "card-15": {
         cardId: "card-15",
         Title: "Alien",
         faClass: "fa-reddit-alien",
         index: 15,
-    },
+    }, // matching card is 
     "card-16": {
         cardId: "card-16",
         title: "Horse",
         faClass: "fa-horse",
         index: 16,
-    },
+    }, // matching card is 
     "card-17": {
         cardId: "card-17",
         title: "Cat",
         faClass: "fa-cat",
         index: 17,
-    },
+    }, // matching card is 
     "card-18": {
         cardId: "card-18",
         title: "Apple",
         faClass: "fa-apple-alt",
         index: 18,
-    },
+    }, // matching card is 
     "card-19": {
         cardId: "card-19",
         title: "Tractor",
         faClass: "fa-tractor",
         index: 19,
-    },
+    }, // matching card is 
     "card-20": {
         cardId: "card-20",
         title: "Spider",
         faClass: "fa-spider",
         index: 20,
-    },
+    }, // matching card is 
     "card-21": {
         cardId: "card-21",
         title: "Dog",
         faClass: "fa-dog",
         index: 21,
-    },
+    }, // matching card is 
     "card-22": {
         cardId: "card-22",
         title: "Alien",
         faClass: "fa-reddit-alien",
         index: 22,
-    },
+    }, // matching card is 
     "card-23": {
         cardId: "card-23",
         title: "Hippo",
         faClass: "fa-hippo",
         index: 23,
-    },
+    }, // matching card is 
     "card-24": {
         cardId: "card-24",
         title: "Frog",
         faClass: "fa-frog",
         index: 24,
-    },
+    }, // matching card is 
     "card-25": {
         cardId: "card-25",
         title: "Tree",
         faClass: "fa-tree",
         index: 25,
-    },
+    }, // matching card is 
     "card-26": {
         cardId: "card-26",
         title: "Penguin",
         faClass: "fa-linux",
         index: 26,
-    },
-
+    }, // matching card is 
     "card-27": {
         cardId: "card-27",
         title: "Dragon",
         faClass: "fa-dragon",
         index: 27,
-    },
+    }, // matching card is 
     "card-28": {
         cardId: "card-28",
         title: "Monkey",
         faClass: "fa-mailchimp",
         index: 28,
-    },
+    }, // matching card is 
     "card-29": {
         cardId: "card-29",
         title: "Fish",
         faClass: "fa-fish",
         index: 29,
-    },
+    }, // matching card is 
     "card-30": {
         cardId: "card-30",
         title: "Apple",
         faClass: "fa-apple-alt",
         index: 30,
-    },
+    }, // matching card is 
     "card-31": {
         cardId: "card-31",
         title: "Music",
         faClass: "fa-itunes-note",
         index: 31,
-    },
-
-    "card-31": {
-        cardId: "card-31",
+    }, // matching card is 
+    "card-32": {
+        cardId: "card-32",
         title: "Bird",
         faClass: "fa-crow",
-        index: 31,
+        index: 32,
     },
 
 

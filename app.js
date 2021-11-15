@@ -8,199 +8,208 @@ const CARD_VALUE = 10;
 // Card Object. 
 const cardData = {
 
-    "card-1": {
-        cardId: "card-1",
+    "card-0": {
+        cardId: "card-0",
         title: "Dragon",
         faClass: "fa-dragon",
+        index: 0,
+    },
+    "card-1": {
+        cardId: "card-1",
+        title: "Cat",
+        faClass: "fa-cat",
         index: 1,
     },
     "card-2": {
         cardId: "card-2",
-        title: "Cat",
-        faClass: "fa-cat",
+        title: "Dog",
+        faClass: "fa-dog",
         index: 2,
     },
     "card-3": {
         cardId: "card-3",
-        title: "Dog",
-        faClass: "fa-dog",
-        index: 3,
-    },
-    card4: {
-        cardId: "card-4",
         title: "Frog",
         faClass: "fa-frog",
-        clickCount: "0",
+        index: 3,
     },
-    card5: {
-        cardId: "card-5",
+    "card-4": {
+        cardId: "card-4",
         title: "Fish",
         faClass: "fa-fish",
-        clickCount: "0",
+        index: 4,
     },
-    card6: {
-        cardId: "card-6",
+    "card-5": {
+        cardId: "card-5",
         title: "Bird",
         faClass: "fa-crow",
-        clickCount: "0",
+        index: 5,
     },
-    card7: {
-        cardId: "card-7",
+    "card-6": {
+        cardId: "card-6",
         title: "Hippo",
         faClass: "fa-hippo",
-        clickCount: "0",
+        index: 6,
     },
-    card8: {
-        cardId: "card-8",
+    "card-7": {
+        cardId: "card-7",
         title: "Horse",
         faClass: "fa-horse",
-        clickCount: "0",
+        index: 7,
     },
-    card9: {
-        cardId: "card-9",
+    "card-8": {
+        cardId: "card-8",
         title: "Spider",
         faClass: "fa-spider",
-        clickCount: "0",
+        index: 8,
     },
-    card10: {
-        cardId: "card-10",
+    "card-9": {
+        cardId: "card-9",
         title: "Apple",
         faClass: "fa-apple-alt",
-        clickCount: "0",
+        index: 9,
     },
-    card11: {
-        cardId: "card-11",
+    "card-10": {
+        cardId: "card-10",
         title: "Tractor",
         faClass: "fa-tractor",
-        clickCount: "0",
+        index: 10,
     },
-    card12: {
-        cardId: "card-12",
+    "card-11": {
+        cardId: "card-11",
         title: "Tree",
         faClass: "fa-tree",
-        clickCount: "0",
+        index: 11,
     },
-    card13: {
-        cardId: "card-13",
+    "card-12": {
+        cardId: "card-12",
         title: "Music",
         faClass: "fa-itunes-note",
-        clickCount: "0",
+        index: 12,
     },
-    card14: {
-        cardId: "card-14",
+    "card-13": {
+        cardId: "card-13",
         title: "Monkey",
         faClass: "fa-mailchimp",
-        clickCount: "0",
+        index: 13,
     },
-    card15: {
-        cardId: "card-15",
+    "card-14": {
+        cardId: "card-14",
         title: "Penguin",
         faClass: "fa-linux",
-        clickCount: "0",
+        index: 14,
     },
-    card16: {
-        cardId: "card-16",
+    "card-15": {
+        cardId: "card-15",
         Title: "Alien",
         faClass: "fa-reddit-alien",
-        clickCount: "0",
+        index: 15,
     },
-    card17: {
-        cardId: "card-17",
+    "card-16": {
+        cardId: "card-16",
         title: "Horse",
         faClass: "fa-horse",
-        clickCount: "0",
+        index: 16,
     },
-    card18: {
-        cardId: "card-18",
+    "card-17": {
+        cardId: "card-17",
         title: "Cat",
         faClass: "fa-cat",
-        clickCount: "0",
+        index: 17,
     },
-    card19: {
-        cardId: "card-19",
+    "card-18": {
+        cardId: "card-18",
         title: "Apple",
         faClass: "fa-apple-alt",
-        clickCount: "0",
+        index: 18,
     },
-    card20: {
-        cardId: "card-20",
+    "card-19": {
+        cardId: "card-19",
         title: "Tractor",
         faClass: "fa-tractor",
-        clickCount: "0",
+        index: 19,
     },
-    card21: {
-        cardId: "card-21",
+    "card-20": {
+        cardId: "card-20",
         title: "Spider",
         faClass: "fa-spider",
-        clickCount: "0",
+        index: 20,
+    },
+    "card-21": {
+        cardId: "card-21",
+        title: "Dog",
+        faClass: "fa-dog",
+        index: 21,
     },
     "card-22": {
         cardId: "card-22",
-        title: "Dog",
-        faClass: "fa-dog",
-        index: 22,
-    },
-    card23: {
-        cardId: "card-23",
         title: "Alien",
         faClass: "fa-reddit-alien",
-        clickCount: "0",
+        index: 22,
     },
-    card24: {
-        cardId: "card-24",
+    "card-23": {
+        cardId: "card-23",
         title: "Hippo",
         faClass: "fa-hippo",
-        clickCount: "0",
+        index: 23,
     },
-    card25: {
-        cardId: "card-25",
+    "card-24": {
+        cardId: "card-24",
         title: "Frog",
         faClass: "fa-frog",
-        clickCount: "0",
+        index: 24,
     },
-    card26: {
-        cardId: "card-26",
+    "card-25": {
+        cardId: "card-25",
         title: "Tree",
         faClass: "fa-tree",
-        clickCount: "0",
+        index: 25,
     },
-    card27: {
-        cardId: "card-27",
+    "card-26": {
+        cardId: "card-26",
         title: "Penguin",
         faClass: "fa-linux",
-        clickCount: "0",
+        index: 26,
     },
 
-    "card-28": {
-        cardId: "card-28",
+    "card-27": {
+        cardId: "card-27",
         title: "Dragon",
         faClass: "fa-dragon",
-        index: 28,
+        index: 27,
     },
-    card29: {
-        cardId: "card-29",
+    "card-28": {
+        cardId: "card-28",
         title: "Monkey",
         faClass: "fa-mailchimp",
-        clickCount: "0",
+        index: 28,
     },
-    card30: {
-        cardId: "card-30",
+    "card-29": {
+        cardId: "card-29",
         title: "Fish",
         faClass: "fa-fish",
-        clickCount: "0",
+        index: 29,
     },
-    card31: {
-        cardId: "card-31",
+    "card-30": {
+        cardId: "card-30",
         title: "Apple",
         faClass: "fa-apple-alt",
-        clickCount: "0",
+        index: 30,
     },
-    card32: {
-        cardId: "card-32",
+    "card-31": {
+        cardId: "card-31",
         title: "Music",
         faClass: "fa-itunes-note",
-        clickCount: "0",
+        index: 31,
     },
+
+    "card-31": {
+        cardId: "card-31",
+        title: "Bird",
+        faClass: "fa-crow",
+        index: 31,
+    },
+
+
 
 };
 
@@ -329,8 +338,8 @@ function showHideCard() {
                         canClick = true;
                         console.log(cardList);
                         console.log(cardOne)
-                        const domCardOne = cardList[cardOne.index - 1]
-                        const domCardTwo = cardList[cardTwo.index - 1]
+                        const domCardOne = cardList[cardOne.index]
+                        const domCardTwo = cardList[cardTwo.index]
                         // game state reset the what cards are selected. 
                         let domCardOneFirstChild = domCardOne.children[0];
                         let domCardOneSecondChild = domCardOne.children[1];

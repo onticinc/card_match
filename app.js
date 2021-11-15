@@ -293,9 +293,9 @@ function updateScore() {
 
 function updatePlayerTurn() {
     if (gameState.turn === PLAYER_ONE) {
-        playerTurnElement.innerText = "it is " + (gameState.players[PLAYER_ONE].name || "Player 1's") + " turn";
+        playerTurnElement.innerText = "it is " + (gameState.players[PLAYER_ONE].name || "Player 1") + "'s turn";
     } else {
-        playerTurnElement.innerText = "It is " + (gameState.players[PLAYER_TWO].name || "Player 2's") + " turn";
+        playerTurnElement.innerText = "It is " + (gameState.players[PLAYER_TWO].name || "Player 2") + "'s turn";
     }
 } // Sets player turn. 
 
@@ -394,22 +394,6 @@ function quickLook() {
     }, 3000)
 
 };
-
-
-// display players turn 
-
-function displayPlayerTurn() {
-    let display = document.querySelector("players-turn");
-    if (playerTurn % 2 == 0) {
-        console.log(playerTurn);
-        display.innerHTML = (playerTwoInput + "'s turn");
-    }
-    else {
-        display.innerHTML = (playerOneInput + "'s turn");
-    }
-
-    playerTurn++;
-}
 
 
 // DO LATER. use js to populate flex and grid area. Create object with FA icon values and card numbers. Randomize the board.  

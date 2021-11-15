@@ -198,7 +198,6 @@ const cardData = {
 
 };
 
-
 // set variables
 let mainScore = 'null';
 
@@ -331,12 +330,12 @@ function displayPlayerTurn() {
     playerTurn++;
 }
 
-function displayOutput() {
-    if (playerTurn % 2 == 1)
-        this.innerHTML = playerOneChoice;
-    else
-        this.innerHTML = playerTwoChoice;
-}
+// function displayOutput() {
+//     if (playerTurn % 2 == 1)
+
+//     else
+
+// }
 
 // compare cards = define a match between the divs.
 

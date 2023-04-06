@@ -1,6 +1,0 @@
-Figure out Toggle Div on All Divs
-Figure out Start Game Button. 
-Figure out Reset Game Button. 
-Figure out Quick Look Button.
-Figure out Score function.
-Greate Player name divs on game. 
